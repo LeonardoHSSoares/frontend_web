@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: azure;
+}
+body {
+    background-image: url('../img/world_map.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+header {
+    /* Adicionei um ajuste de flex-grow para o cabeçalho ocupar espaço adicional se necessário */
+    flex-grow: 0;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinha o conteúdo centralizado horizontalmente */
+    justify-content: center; /* Alinha o conteúdo centralizado verticalmente */
+    flex-grow: 1; /* Faz com que a classe "container" ocupe o espaço disponível restante */
+}
+
+ul {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 8px;
+    border: none;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+ul li {
+    position: relative;
+    display: inline-block;
+}
+
+ul.listaPaises li a, ul.listaPaises li button {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    color: azure; /* Garante que a cor do texto seja visível */
+}
+
+ ul li a {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    text-align: center;
+    font-size: 25px;
+} 
+
+ul li ul.listaPaises {
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul.listaPaises li {
+    display: block;
+    margin-bottom: 5px; /* Adicione um espaçamento entre os botões */
+}
+
+ul li a:hover {
+    background-color: rgba(92, 88, 88, 0.7);
+}
+
+ul li:hover ul.listaPaises {
+    display: block;
+}
+
+
+
+p {
+    text-align: center;
+    margin-top: 40px;
+    font-size: large;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: azure;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+ul li .button {
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+}
+
+ul li .button:hover {
+    background-color: rgba(92, 88, 88, 0.7);
+}
