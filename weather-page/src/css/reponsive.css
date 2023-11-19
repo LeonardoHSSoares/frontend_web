@@ -1,0 +1,68 @@
+@media (max-width: 425px) {
+    main {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    
+    }
+    
+    #boxMain {
+        color: azure;
+        border: ridge 2px black;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5%;
+        background: #333;
+        opacity: 0.8;
+        width: 95%;
+        max-width: 400px;
+        text-align: center;
+        position: absolute;
+    }
+    
+    #backgroundRandom {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+    
+    .inputCity {
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 25px;
+        font-size: 20px;
+        background-color: #7c7c7c2b;
+        width: calc(100% - 50px);
+    
+    }
+    
+    .buttonSearch {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 10px;
+        border: 50px;
+        background-color: #7c7c7c2b;
+        float: right;
+    
+    }
+    
+    .imgSearch {
+        width: 20px;
+    }
+    
+    #boxWeather {
+        display: flex;
+        flex-direction: row;
+        text-transform: capitalize;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+}
