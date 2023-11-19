@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rubik&family=Secular+One&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <title>App de Clima</title>
+</head>
+
+<body>
+    <main>
+        <img id="backgroundRandom" src="https://source.unsplash.com/1600x900/?landscape" alt="Image-Random">
+        <div id="boxMain">
+            <article>
+                <input type="text" placeholder="Digite o nome da Cidade" class="inputCity">
+                <button class="buttonSearch" onclick="inputCity()">
+                    <img class="imgSearch" src="https://www.svgrepo.com/show/488200/find.svg" alt="iconButton">
+                </button>
+            </article>
+            <article class="boxCity">
+                <h2 class="city">Cidade</h2>
+                <p class="temperature">Graus °C</p>
+            </article>
+            <article id="boxWeather">
+                <img class="iconWeather" src="https://openweathermap.org/img/wn/04n.png" alt="icone-clima">
+                <p class="weather">Nublado</p>
+            </article>
+            <p class="humidity">Umidade: 76%</p>
+        </div>
+        <script src="./src/js/script.js"></script>
+    </main>
+</body>
+
+</html>
