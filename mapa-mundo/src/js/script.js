@@ -27,8 +27,10 @@ document.addEventListener('DOMContentLoaded', function () {
             pais.addEventListener('click', function () {
                 // Obtém o valor do atributo 'data-sigla'
                 let siglaPais = pais.getAttribute('value');
+                
                 console.log(siglaPais)
-                exibirConteudo(pais.id);
+
+                
                 searchCity(siglaPais); // Chama a função de pesquisa com a sigla do país
             });
         });
