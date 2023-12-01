@@ -7,37 +7,36 @@ function showOutput(dataBase) {
     console.log(dataBase);
 }
 
-async function searchCity(paisSigla) {
-    const dataBase = await fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${sigla}`).then(response => response.json());
+async function searchCity(siglaPais) {
+    const dataBase = await fetch(`https://servicodados.ibge.gov.br/api/v1/paises/${siglaPais}`).then(response => response.json());
 
     showOutput(dataBase);
     
 }
 
-function inputCity() {
-    const sigla = document.querySelector('').value;
-    searchCity(sigla);
-}
-    document.addEventListener('DOMContentLoaded', function () {
-    // Obtém a lista de países
-    let listaPaises = document.querySelectorAll('.paises li');
-    const sigla = document.querySelector('').value;
-    
-    // Adiciona um evento de clique a cada item da lista de países
-    listaPaises.forEach(function (pais) {
-        pais.addEventListener('click', function () {
-            // Obtém o id do país clicado
-            let paisId = pais.id;
-            let paisSigla = pais.sigla;
-            // Exibe os contêineres de conteúdo correspondentes ao país clicado
-            
-            exibirConteudo(paisId);
-            inputCity(paisSigla);
+document.addEventListener('DOMContentLoaded', function () {
+        let listaPaises = document.querySelectorAll('.paises li');
+        
+        listaPaises.forEach(function (pais) {
+            pais.addEventListener('click', function () {
+                let paisId = pais.id;
+                exibirConteudo(paisId);
+            });
         });
-    });
+        listaPaises.forEach(function (pais) {
+            pais.addEventListener('click', function () {
+                // Obtém o valor do atributo 'data-sigla'
+                let siglaPais = pais.getAttribute('value');
+                console.log(siglaPais)
+                exibirConteudo(pais.id);
+                searchCity(siglaPais); // Chama a função de pesquisa com a sigla do país
+            });
+        });
 
-    // Função para exibir os contêineres de conteúdo correspondentes ao país clicado
-    function exibirConteudo(paisId) {
+        // Correção da seleção de elementos por classe
+        
+
+        function exibirConteudo(paisId) {
         // Oculta todos os contêineres de conteúdo
         let todosConteudos = document.querySelectorAll('.conteudo');
         todosConteudos.forEach(function (conteudo) {

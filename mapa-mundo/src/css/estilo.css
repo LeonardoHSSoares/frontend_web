@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/munndi.JPEG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+.listaHeader {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    display: flex;
+    justify-content: space-between; /* Adicionado para espaçamento uniforme entre os botões */
+    padding: 10px; /* Adicionado para espaçamento interno */
+}
+
+.listaHeader li {
+    display: inline-block;
+    margin-right: 20px;
+    padding: 10px;
+}
+
+.listaHeader li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+}
+
+.listaHeader li a:hover {
+    background-color: #555;
+}
+
+.botao {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    color: white;
+    position: relative;
+}
+
+.paises {
+    list-style: none;
+    padding: 0;
+    background-color: #c2c7c7b6;
+    display: none;
+    
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    color: black;
+    z-index: 2;
+    position: relative;
+}
+
+.botao:hover .paises {
+    display: block;
+}
+
+.paises li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+    width: 100%; /* Adicionado para ocupar 100% da largura */
+    z-index: 999;
+    
+
+}
+
+.paises li:hover {
+    background-color: #f0f0f0;
+}
+
+#principal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: calc(100% - 80px); /* Ajuste para considerar o espaço do cabeçalho */
+    overflow: auto;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.conteudo {
+    border-style: ridge;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(33.33% - 40px);
+    display: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
