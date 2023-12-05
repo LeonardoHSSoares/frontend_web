@@ -1,10 +1,22 @@
+
 function showOutput(dataBase) {
+   document.querySelector('.nomePais').textContent= dataBase[0].nome.abreviado;
+    document.querySelector('.capital').textContent = dataBase[0].governo.capital.nome;
+    document.querySelector('.descricaoPais').
+    textContent = dataBase[0].historico;
+    document.querySelector('.area').textContent = dataBase[0].area.total;
+    document.querySelector('.simbolo').textContent = dataBase[0].area.unidade.símbolo;
+    document.querySelector('.idioma').innerHTML = dataBase[0].linguas[0].nome;
+    document.querySelector('.moeda').innerHTML = dataBase[0].unidades-monetarias[0];
+
+    
+    
     /*document.querySelector('.city').innerHTML = `Clima em ${dataBase.name}`;
     document.querySelector('.temperature').innerHTML = `${Math.round(dataBase.main.temp)}°C`;
     document.querySelector('.weather').innerHTML = dataBase.weather[0].description;
     document.querySelector('.humidity').innerHTML = `Umidade: ${dataBase.main.humidity}%`;
     document.querySelector('.iconWeather').src =  `https://openweathermap.org/img/wn/${dataBase.weather[0].icon}.png`*/
-    console.log(dataBase);
+
 }
 
 async function searchCity(siglaPais) {
