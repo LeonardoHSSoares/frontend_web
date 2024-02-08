@@ -5,13 +5,12 @@
  Estrutura HTML:
  A estrutura HTML do aplicativo é simples e funcional. Ela inclui:
  
- Cabeçalho (Head): Define o conjunto de caracteres como UTF-8, a visão responsiva para dispositivos móveis e importa fontes do Google Fonts (Open Sans, Rubik, Secular One).
+ Head: Define o conjunto de caracteres como UTF-8, a visão responsiva para dispositivos móveis e importa fontes do Google Fonts (Open Sans, Rubik, Secular One).
  
- Corpo (Body): Contém um elemento principal (<main>) que abriga o conteúdo principal da aplicação, incluindo:
+ Body: Contém um elemento principal (<main>) que abriga o conteúdo principal da aplicação, incluindo:
    *Uma imagem de fundo dinâmica (via Unsplash).
    *Uma caixa de pesquisa para inserir o nome da cidade.
    *Uma seção para exibir informações meteorológicas como nome da cidade, temperatura, condições do tempo, ícone representativo do clima e umidade.
-
 
  Estilos CSS:
  Estilos Globais: Aplica box-sizing, margin e padding a todos os elementos, além de definir a fonte padrão como 'Open Sans'.
