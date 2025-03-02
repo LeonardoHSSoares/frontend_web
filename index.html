@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,6 +32,11 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        .portfolio-item img {
+            max-width: 100%; /* Faz a imagem se ajustar ao tamanho da div */
+            height: auto; /* Mantém a proporção da imagem */
+            border-radius: 5px; /* Arredonda os cantos da imagem */
+        }
         footer {
             text-align: center;
             padding: 20px 0;
@@ -49,13 +54,15 @@
     <div class="container">
         <h1>Meu Portfólio</h1>
         <p>Bem-vindo ao meu portfólio! Aqui estão alguns dos meus trabalhos.</p>
-        
     </div>
 </header>
 
 <div class="container">
-    <div class="portfolio-item"a href="https://leonardohssoares.github.io/frontend_web/OnePiece/"></a>>
+    <div class="portfolio-item">
         <h2>Projeto One Piece</h2>
+        <a href="https://leonardohssoares.github.io/frontend_web/OnePiece/">
+            <img src="URL_DA_SUA_IMAGEM" alt="Miniatura do Projeto One Piece">
+        </a>
         <p>Esta página web é uma homenagem aos personagens do popular anime "One Piece". O design é focado em proporcionar uma experiência interativa e visualmente atraente para os fãs da série.</p>
     </div>
     <div class="portfolio-item">
