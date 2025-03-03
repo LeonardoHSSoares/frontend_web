@@ -26,9 +26,13 @@ h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .portfolio-item img {
-    max-width: 100%; /* Faz a imagem se ajustar ao tamanho da div */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 5px; /* Arredonda os cantos da imagem */
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover; /* Cobre o contêiner mantendo a proporção */
+    aspect-ratio: 16 / 9; /* Define uma proporção específica, ajuste conforme necessário */
 }
 footer {
     text-align: center;
