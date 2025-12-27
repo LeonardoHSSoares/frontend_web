@@ -1,45 +1,103 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-}
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-}
-h1 {
-    margin: 0;
-}
-.portfolio-item {
-    background: #fff;
-    margin: 20px 0;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.portfolio-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    display: block;
-    margin: 0 auto;
-    object-fit: cover; /* Cobre o contêiner mantendo a proporção */
-    aspect-ratio: 16 / 9; /* Define uma proporção específica, ajuste conforme necessário */
-}
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
+ /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #3498db;
+        }
+
+        .project-content p {
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        .project-link {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .project-link:hover {
+            background-color: #2980b9;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+        }
